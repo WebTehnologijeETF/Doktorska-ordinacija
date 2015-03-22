@@ -8,3 +8,5 @@ Stranica treba da:
 3. Pruži informacije o lokaciji, radnom vremenu i načinu kontaktiranja;
 4. Omogući on-line naručivanje;
 5. Omogući postavljanje pitanja direktno doktoru.
+
+Ordinacija je imaginarna.
