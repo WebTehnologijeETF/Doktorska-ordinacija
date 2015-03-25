@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Norican);
+
+body {
+	background-color: #E0F0FF;
+}
+
+h1 {
+	text-align: center;
+	font-family: Norican;
+	font-weight: 400;
+	color: #002F59;
+}
+
+#meni {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc; 
+	border-top: 1px solid #ccc;
+}
+
+#meni li {
+	float: left;
+}
+
+#meni li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: 400;
+	color: blue;
+	border-right: 1px solid #ccc;
+}
+
+#meni li a:hover {
+    background-color: #C5B2E0;
+	color: #1C1427;
+}
