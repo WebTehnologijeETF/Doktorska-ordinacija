@@ -1,10 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Norican);
+@import url(http://fonts.googleapis.com/css?family=Norican|Open+Sans);
 
 body {
 	background-color: #E0F0FF;
 }
 
 h1 {
+	font-size: 48px;
 	text-align: center;
 	font-family: Norican;
 	font-weight: 400;
@@ -13,29 +14,40 @@ h1 {
 
 #meni {
 	width: 100%;
-	float: left;
+	float: right;
 	margin: 0 0 3em 0;
 	padding: 0;
 	list-style: none;
-	background-color: #f2f2f2;
-	border-bottom: 1px solid #ccc; 
-	border-top: 1px solid #ccc;
+	background-color: #F5FFFF;
+	border-bottom: 3px solid #CCD2D8; 
+	border-top: 3px solid #CCD2D8;
 }
 
 #meni li {
-	float: left;
+	float: right;
 }
 
 #meni li a {
 	display: block;
-	padding: 8px 15px;
+	padding: 8px 35px;
 	text-decoration: none;
 	font-weight: 400;
-	color: blue;
-	border-right: 1px solid #ccc;
+	color: #0066CC;
+	border-right: 1px solid #CCD2D8;
+	font-family: Open Sans;
 }
 
 #meni li a:hover {
-    background-color: #C5B2E0;
-	color: #1C1427;
+    background-color: #EBF5FF;
+	color: #000080;
+}
+
+#linkovi {
+	margin-right: 15%;
+	float: left;
+	border-right: 3px solid #CCD2D8;
+	padding-right: 40px;
+}
+
+#novost {
 }
