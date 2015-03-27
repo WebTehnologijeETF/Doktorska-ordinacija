@@ -1,4 +1,4 @@
-# Doktorska ordinacija - web stranica za prezentaciju
+# Privatna ordinacija "Osmijeh" - web stranica za prezentaciju
 
 Cilj ovog projekta je napraviti jednostavnu i funkcionalnu web stranicu koja će predstaviti privatnu doktorsku ordinaciju.
 

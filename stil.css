@@ -1,7 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Norican|Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Slabo+27px|Open+Sans:400,400italic,600|Norican&subset=latin-ext);
 
 body {
 	background-color: #E0F0FF;
+}
+
+.novosti h3{
+	font-family: 'Open Sans';
 }
 
 h1 {
@@ -14,7 +18,7 @@ h1 {
 
 #meni {
 	width: 100%;
-	float: right;
+	float: left;
 	margin: 0 0 3em 0;
 	padding: 0;
 	list-style: none;
@@ -24,12 +28,12 @@ h1 {
 }
 
 #meni li {
-	float: right;
+	float: left;
 }
 
 #meni li a {
 	display: block;
-	padding: 8px 35px;
+	padding: 8px 55px;
 	text-decoration: none;
 	font-weight: 400;
 	color: #0066CC;
@@ -45,9 +49,15 @@ h1 {
 #linkovi {
 	margin-right: 15%;
 	float: left;
-	border-right: 3px solid #CCD2D8;
 	padding-right: 40px;
+	height: 100%;
 }
 
-#novost {
+.novosti {
+	display: block;
+	margin-left: 105px;
+	font-family: 'Slabo 27px';
+	background-color: white;
+	border-bottom: 1px solid black;
+	border-left: 3px solid #CCD2D8;	
 }
