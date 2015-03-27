@@ -10,9 +10,9 @@
 
 <ul ID="meni">
 	<li><a href="index.html">Naslovnica</a></li>
-	<li><a href="o_nama.html">O nama</a></li>
-	<li><a href="info.html">Informacije</a></li>
-	<li><a href="kontakt.html">Kontakt</a></li>
+	<li><a href="#">O nama</a></li>
+	<li><a href="#">Informacije</a></li>
+	<li><a href="#">Kontakt</a></li>
 </ul>
 
 <ul ID="linkovi">
