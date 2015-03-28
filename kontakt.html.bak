@@ -28,7 +28,7 @@
 
 <div class="kontakt">
 	<form action="">
-		<textarea name="kontakt" cols="55" rows="15"></textarea><br>
+		<textarea name="kontakt" cols="55" rows="15"></textarea>
 		<input type="button" name="dugme_posalji" value="Pošalji">
 	</form>
 </div>
