@@ -5,11 +5,23 @@ body {
 }
 
 h1 {
+	float: left;
 	font-size: 48px;
 	text-align: center;
 	font-family: Norican;
 	font-weight: 400;
 	color: #19446A;
+	padding-left: 10px;
+	padding-bottom: 0;
+}
+
+.logo {
+	float: left;
+	padding-bottom: 0;
+}
+
+.meni {
+	padding: 0;
 }
 
 .meni ul {
