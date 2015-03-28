@@ -4,19 +4,15 @@ body {
 	background-color: #E0F0FF;
 }
 
-.novosti h3{
-	font-family: 'Open Sans';
-}
-
 h1 {
 	font-size: 48px;
 	text-align: center;
 	font-family: Norican;
 	font-weight: 400;
-	color: #002F59;
+	color: #19446A;
 }
 
-#meni {
+.meni ul {
 	width: 100%;
 	float: left;
 	margin: 0 0 3em 0;
@@ -27,37 +23,83 @@ h1 {
 	border-top: 3px solid #CCD2D8;
 }
 
-#meni li {
+.meni li {
 	float: left;
 }
 
-#meni li a {
+.meni li a {
 	display: block;
 	padding: 8px 55px;
 	text-decoration: none;
 	font-weight: 400;
 	color: #0066CC;
 	border-right: 1px solid #CCD2D8;
-	font-family: Open Sans;
+	font-family: 'Open Sans';
 }
 
-#meni li a:hover {
+.meni li a:hover {
     background-color: #EBF5FF;
 	color: #000080;
 }
 
-#linkovi {
-	margin-right: 15%;
+.linkovi {
+	margin: 0;
+	padding: 0;
 	float: left;
-	padding-right: 40px;
-	height: 100%;
+	width: 15%;
 }
 
 .novosti {
-	display: block;
-	margin-left: 105px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 69%;
 	font-family: 'Slabo 27px';
 	background-color: white;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #CCD2D8;
 	border-left: 3px solid #CCD2D8;	
+}
+
+.novosti h3{
+	font-family: 'Open Sans';
+	color: #5C656E;
+}
+
+.sidebar  {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 15%;
+	font-size: 12px;
+}
+
+.tabela table {
+	background-color: white;
+	table-layout: fixed;
+	width: 50%;
+	float: left;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #4D6D8B;
+}
+
+.tabela td, th {
+	text-align: left;
+	height: 30px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #4D6D8B;
+}
+
+.tabela th {
+	color: #DFE5EA;
+	background-color: #4D6D8B;
+}
+
+.alt {
+	background-color: #CAD3DC;
 }
