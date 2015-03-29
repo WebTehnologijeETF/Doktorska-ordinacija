@@ -59,7 +59,7 @@ h1 {
 	font-family: 'Open Sans';
 	background-color: #036;
 	color: #E8ECF1;
-	border-right: 1px solid #E8ECF1;
+	border-right: #E8ECF1;
 }
 
 .meni ul li a:hover {
