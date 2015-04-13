@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML>
 <HEAD>
+<script src="skripta.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <TITLE>Privatna ordinacija "Osmijeh"</TITLE>
 <link rel="stylesheet" type="text/css" href="stil.css">
@@ -39,6 +40,5 @@
 		Polja označena zvjezdicom (*) su obavezna.
 	</form>
 </div>
-<script src="skripta.js"></script>
 </BODY>
 </HTML>
