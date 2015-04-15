@@ -145,3 +145,16 @@ h1 {
 #greska_poruka {
 	visibility: hidden;
 }
+
+#poruka {
+	vertical-align: top;
+}
+
+.stablo {
+	float: left;
+	
+}
+
+.stablo li {
+	list-style-type: none;
+}

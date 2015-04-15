@@ -32,12 +32,24 @@
 		<input type="text" maxlength=100 id="ime" value="Ime" name="ime"><br>
 		<input type="text" maxlength=100 id="mail" value="E-mail" name="mail">*
 		<span id="greska_mail"><img src="error.png"></img>E-mail nije validan.</span><br>
-		<input type="text" maxlength=100 id="subject" value="Tema poruke" name="subject"><br>
+		<select id="subject">
+		  <option value="narudzba">Naručivanje</option>
+		  <option value="pitanja">Pitanje o bolesti</option>
+		  <option value="info">Tehničke informacije</option>
+		  <option value="ostalo">Ostalo</option>
+		</select>
+		<br>
 		<textarea name="poruka" id="poruka" cols="55" rows="15"></textarea>*<br>
 		<input type="submit" id="dugme_posalji" name="dugme_posalji" value="Pošalji">
 		<span id="greska_poruka"><img src="error.png"></img>Ne možete poslati praznu poruku.</span><br>
 		Polja označena zvjezdicom (*) su obavezna.
 	</form>
+</div>
+<div class="stablo">
+	<ul>
+		<li id="2015">2015
+		<li id="2014">2014
+	</ul>
 </div>
 <script src="skripta.js"></script>
 </BODY>
