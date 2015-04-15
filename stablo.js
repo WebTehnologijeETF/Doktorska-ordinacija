@@ -4,8 +4,9 @@ document.getElementById("2014").addEventListener("click", pokaziMjesece);
 function pokaziMjesece(event) {
     var godina = event.currentTarget;
     if (godina.childElementCount == 0) {
-        var mjeseci = ["Januar", "Februar", "Mart", "April", "Maj", "Juni",
-            "Juli", "August", "Septembar", "Oktobar", "Novembar", "Decembar"],
+		godina.innerHTML=godina.innerHTML.replace("+","-");
+        var mjeseci = ["+ Januar", "+ Februar", "+ Mart", "+ April", "+ Maj", "+ Juni",
+            "+ Juli", "+ August", "+ Septembar", "+ Oktobar", "+ Novembar", "+ Decembar"],
 			listaMjeseci = document.createElement("UL"), i;
         for (i = 0; i < 12; i++) {
             var mjesec = document.createElement("LI");
@@ -23,6 +24,7 @@ function pokaziMjesece(event) {
 function pokaziDane(event) {
     var mjesec = event.currentTarget;
     if (mjesec.childElementCount == 0) {
+		mjesec.innerHTML=mjesec.innerHTML.replace("+","-");
         var dani = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
         var listaDana = document.createElement("UL");
         for (var i = 1; i <= dani[mjesec.className]; i++) {
@@ -33,5 +35,6 @@ function pokaziDane(event) {
         mjesec.appendChild(listaDana);
     } else {
         mjesec.removeChild(mjesec.firstElementChild);
+		mjesec.innerHTML=mjesec.innerHTML.replace("-","+");
     }
 }
