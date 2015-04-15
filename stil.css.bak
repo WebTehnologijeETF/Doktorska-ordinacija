@@ -141,3 +141,16 @@ h1 {
 #greska_mail {
 	visibility: hidden;
 }
+
+#greska_poruka {
+	visibility: hidden;
+}
+
+#poruka {
+	vertical-align: top;
+}
+
+.stablo {
+	float: left;
+	list-style: none;
+}
