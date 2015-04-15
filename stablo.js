@@ -17,11 +17,13 @@ function pokaziMjesece(event) {
         }
         godina.appendChild(listaMjeseci);
     } else {
-        //godina.removeChild(godina.firstElementChild);
+        godina.removeChild(godina.firstElementChild);
+		godina.innerHTML=godina.innerHTML.replace("-","+");
     }
 }
 
 function pokaziDane(event) {
+	event.stopPropagation();
     var mjesec = event.currentTarget;
     if (mjesec.childElementCount == 0) {
 		mjesec.innerHTML=mjesec.innerHTML.replace("+","-");
