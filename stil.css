@@ -91,6 +91,22 @@ h1 {
 	color: #5C656E;
 }
 
+.o_nama {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 69%;
+	font-family: 'Slabo 27px';
+	background-color: white;
+	border-bottom: 1px solid #CCD2D8;
+	border-left: 3px solid #CCD2D8;	
+}
+
+.o_nama h3{
+	font-family: 'Open Sans';
+	color: #5C656E;
+}
+
 .sidebar  {
 	margin: 0;
 	padding: 0;
@@ -99,7 +115,7 @@ h1 {
 	font-size: 12px;
 }
 
-.tabela table {
+.info table {
 	background-color: white;
 	table-layout: fixed;
 	width: 50%;
@@ -111,7 +127,7 @@ h1 {
 	border-color: #4D6D8B;
 }
 
-.tabela td, th {
+.info td, th {
 	text-align: left;
 	height: 30px;
 	border-collapse: collapse;
@@ -121,7 +137,7 @@ h1 {
 	border-color: #4D6D8B;
 }
 
-.tabela th {
+.info th {
 	color: #DFE5EA;
 	background-color: #4D6D8B;
 }
