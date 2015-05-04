@@ -162,6 +162,14 @@ h1 {
 	visibility: hidden;
 }
 
+#greska_tel {
+	visibility: hidden;
+}
+
+#greska_drzave {
+	visibility: hidden;
+}
+
 #poruka {
 	vertical-align: top;
 }
