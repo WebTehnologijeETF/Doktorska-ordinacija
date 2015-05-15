@@ -1,19 +1,22 @@
-<form action="mail_validacija.php" method="POST">
-	<input type="text" maxlength=100 id="ime" value="Ime" name="ime"><br>
-	<input type="text" maxlength=100 id="mail" value="E-mail" name="mail">*
-	<span id="greska_mail"><img src="error.png"></img>E-mail nije validan.</span><br>
-	<input type="text" maxlength=20 id="tel" value="Telefon" name="tel">
-	<span id="greska_tel"><img src="error.png"></img>Broj nije validan.</span><br>
-	<select id="subject">
-	  <option value="narudzba">Naručivanje</option>
-	  <option value="pitanja">Pitanje o bolesti</option>
-	  <option value="info">Tehničke informacije</option>
-	  <option value="ostalo">Ostalo</option>
-	</select><br>
-	<select id="drzave">
-	</select><span id="greska_drzave"><img src="error.png"></img>Države se ne mogu loadirati.</span><br>
-	<textarea name="poruka" id="poruka" cols="55" rows="15"></textarea>*<br>
-	<input type="submit" id="dugme_posalji" name="dugme_posalji" value="Pošalji">
-	<span id="greska_poruka"><img src="error.png"></img>Ne možete poslati praznu poruku.</span><br>
-	Polja označena zvjezdicom (*) su obavezna.
+<form action="<?=htmlspecialchars(mail_validacija.php)?>" method="POST">
+    <input type="text" maxlength=100 id="ime" value="Ime" name="ime"><br>
+    <input type="text" maxlength=100 id="mail" value="E-mail" name="mail">*
+    <!-- <span id="greska_mail"><img alt="greska" src="error.png">E-mail nije validan.</span><br> -->
+	<span class="greska"><?=$mailErr;?></span><br>
+    <input type="text" maxlength=20 id="tel" value="Telefon" name="tel">
+    <!-- <span id="greska_tel"><img src="error.png" alt="greska">Broj nije validan.</span><br> -->
+	<span class="greska"><?=$telErr;?></span><br>
+    <select id="subject" name="subject">
+        <option value="narudzba">Naručivanje</option>
+        <option value="pitanja">Pitanje o bolesti</option>
+        <option value="info">Tehničke informacije</option>
+        <option value="ostalo">Ostalo</option>
+    </select><br>
+    <select id="drzave" name="drzave"></select>
+    <span id="greska_drzave"><img src="error.png" alt="greska">Države se ne mogu loadirati.</span><br>
+    <textarea name="poruka" id="poruka" cols="55" rows="15"></textarea>*<br>
+    <input type="submit" id="dugme_posalji" name="dugme_posalji" value="Pošalji">
+    <!-- <span id="greska_poruka"><img alt="greska" src="error.png">Ne možete poslati praznu poruku.</span><br> -->
+	<span class="greska"><?=$porukaErr;?></span><br>
+    Polja označena zvjezdicom (*) su obavezna.
 </form>
