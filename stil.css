@@ -22,7 +22,7 @@ h1 {
 
 .meni {
 	padding: 0;
-	margin: 0;
+	margin-bottom: 10;
 	float: left;
 	width: 100%;
 	overflow: hidden;
@@ -63,8 +63,9 @@ h1 {
 }
 
 .meni ul li a:hover {
-    background-color: #EBF5FF;
+    background-color: #EBC2FF;
 	color: #000080;
+	border: 2px solid bisque;
 }
 
 .linkovi {
@@ -115,6 +116,11 @@ h1 {
 	font-size: 12px;
 }
 
+div.info {
+	float: left;
+	width: 69%;
+}
+
 .info table {
 	background-color: white;
 	table-layout: fixed;
@@ -146,11 +152,12 @@ h1 {
 	background-color: #CAD3DC;
 }
 
-.kontakt {
+.kontakt, .proizvodi {
 	float: left;
+	width: 69%;
 }
 
-.kontakt input {
+.kontakt, .proizvodi input {
 	align: right;
 }
 
