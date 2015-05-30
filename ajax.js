@@ -3,11 +3,11 @@ function otvori_stranicu(stranica) {
 	ajax.onreadystatechange = function() {
 		if (ajax.readyState == 4 && ajax.status == 200) {
 			document.getElementById("glavni").innerHTML = ajax.responseText;
-			klasa = stranica.slice(0, stranica.length - 5);
+			klasa = stranica.slice(0, stranica.length - 4);
 			document.getElementById("glavni").className = klasa;
 			if(stranica == "kontakt.html") {
-				document.getElementById("mail").addEventListener("blur", validirajMail);
-				document.getElementById("poruka").addEventListener("blur", validirajPoruku);
+				// document.getElementById("mail").addEventListener("blur", validirajMail);
+				// document.getElementById("poruka").addEventListener("blur", validirajPoruku);
 				document.getElementById("tel").addEventListener("blur", validirajTelefon);
 				popuniDrzave();
 			}
