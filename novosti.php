@@ -1,5 +1,5 @@
 <?php
-$veza = new PDO("mysql:dbname=ordinacijaosmijeh;host=localhost;charset=utf8", "doktor", "doktorpass");
+$veza = new PDO("mysql:dbname=ordinacijaosmijeh;host=127.5.233.2;charset=utf8", "doktor", "doktorpass");
 $veza->exec("set names utf8");
 $rezultat = $veza->query("select v.id, v.naslov, v.tekst,
                         UNIX_TIMESTAMP(v.vrijeme) vrijeme2, v.autor, count(k.vijest) brKom 
