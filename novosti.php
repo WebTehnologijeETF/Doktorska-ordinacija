@@ -1,10 +1,10 @@
 <?php
-$veza = new PDO("mysql:dbname=ordinacijaosmijeh;host=%;charset=utf8", "doktor", "doktorpass");
+$veza = new PDO("mysql:dbname=ordinacijaosmijeh;host=localhost;charset=utf8", "doktor", "doktorpass");
 $veza->exec("set names utf8");
 $rezultat = $veza->query("select v.id, v.naslov, v.tekst,
-						UNIX_TIMESTAMP(v.vrijeme) vrijeme2, v.autor, count(k.vijest) brKom 
-						from vijest v left join komentar k on v.id=k.vijest
-						group by v.id");
+                        UNIX_TIMESTAMP(v.vrijeme) vrijeme2, v.autor, count(k.vijest) brKom 
+                        from vijest v left join komentar k on v.id=k.vijest
+                        group by v.id");
 if (!$rezultat) {
 	$greska = $veza->errorInfo();
 	print "SQL greška: " . $greska[2];
@@ -39,13 +39,16 @@ foreach ($rezultat as $vijest) {
 	';*/
 }
 if(isset($_REQUEST['vijest'])) {
-	$rezultat = $veza->query("INSERT INTO komentar SET vijest='".$_REQUEST['vijest']."',
-	tekst='".$_REQUEST['komentar']."', autor='".$_REQUEST['autor']."'");
-	
-	if (!$rezultat) {
-		$greska = $veza->errorInfo();
-		print "SQL greška: " . $greska[2];
-		exit();
-	}
+    $filtriranaVijest = filter_input(INPUT_REQUEST, 'vijest', FILTER_SANITIZE_NUMBER_INT);
+    $filriraniKomentar = filter_input(INPUT_REQUEST, 'komentar', FILTER_SANITIZE_STRING);
+    $filtriraniAutor = filter_input(INPUT_REQUEST, 'komentar', FILTER_SANITIZE_STRING);
+
+    $rezultat = $veza->query("INSERT INTO komentar SET vijest='".$filtriranaVijest."',
+    tekst='".$filriraniKomentar."', autor='".$filtriraniAutor."'");
+
+    if (!$rezultat) {
+            $greska = $veza->errorInfo();
+            print "SQL greška: " . $greska[2];
+            exit();
+    }
 }
-?>
