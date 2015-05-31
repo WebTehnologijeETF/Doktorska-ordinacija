@@ -188,3 +188,7 @@ div.info {
 .stablo li {
 	list-style-type: none;
 }
+
+.formaZaSlanjeKomentara {
+    display: none;
+}
