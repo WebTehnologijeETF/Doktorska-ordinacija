@@ -29,7 +29,7 @@ foreach ($rezultat as $vijest) {
     print '<span id="v'.$vijest['id'].'"></span>';
     print '<div id="form'.$vijest['id'].'" class="formaZaSlanjeKomentara">';
     print '
-        <form method="POST" action="posaljiKomentar.js">
+        <form method="GET" action="index.php">
         Vaše ime:<br>
         <input type="text" name="autor" id="autor"><br>
         Vaš mail:<br>
@@ -38,5 +38,24 @@ foreach ($rezultat as $vijest) {
         <input type="submit" name="buttonPosalji" value="Pošalji komentar">
         <input type="hidden" name="vijest" id="vijest" value = "'.$vijest['id'].'">
         </form>';
+    print '<script type="text/javascript" src="posaljiKomentar.js"></script>';
     print '</div>';
+}
+
+if(isset($_REQUEST['vijest'])) {
+    $filtriranaVijest = filter_input(INPUT_GET, 'vijest', FILTER_SANITIZE_NUMBER_INT);
+    $filriraniKomentar = filter_input(INPUT_GET, 'komentar', FILTER_SANITIZE_STRING);
+    $filtriraniAutor = filter_input(INPUT_GET, 'autor', FILTER_SANITIZE_STRING);
+    $filtriraniMail = filter_input(INPUT_GET, 'mail', FILTER_SANITIZE_EMAIL);
+
+    $veza = new PDO("mysql:dbname=ordinacijaosmijeh;host=127.5.233.2;charset=utf8", "doktor", "doktorpass");
+    $veza->exec("set names utf8");
+    $rezultat = $veza->query("INSERT INTO komentar SET vijest='".$filtriranaVijest."',
+    tekst='".$filriraniKomentar."', mail='".$filtriraniMail."', autor='".$filtriraniAutor."'");
+
+    if (!$rezultat) {
+        $greska = $veza->errorInfo();
+        print "SQL greška: " . $greska[2];
+        exit();
+    }
 }
