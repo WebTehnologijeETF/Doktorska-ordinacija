@@ -1,4 +1,4 @@
-<form action="<?=htmlspecialchars(mail_validacija.php)?>" method="POST">
+<form action="mail_validacija.php" method="POST">
     <input type="text" maxlength=100 id="ime" value="Ime" name="ime"><br>
     <input type="text" maxlength=100 id="mail" value="E-mail" name="mail">*
     <!-- <span id="greska_mail"><img alt="greska" src="error.png">E-mail nije validan.</span><br> -->
@@ -14,7 +14,7 @@
     </select><br>
     <select id="drzave" name="drzave"></select>
     <span id="greska_drzave"><img src="error.png" alt="greska">Države se ne mogu loadirati.</span><br>
-    <textarea name="poruka" id="poruka" cols="55" rows="15"></textarea>*<br>
+    <textarea name="poruka" id="poruka" cols="55" rows="15" required></textarea>*<br>
     <input type="submit" id="dugme_posalji" name="dugme_posalji" value="Pošalji">
     <!-- <span id="greska_poruka"><img alt="greska" src="error.png">Ne možete poslati praznu poruku.</span><br> -->
 	<span class="greska"><?=$porukaErr;?></span><br>

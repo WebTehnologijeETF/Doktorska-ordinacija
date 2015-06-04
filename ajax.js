@@ -5,7 +5,7 @@ function otvori_stranicu(stranica) {
             document.getElementById("glavni").innerHTML = ajax.responseText;
             klasa = stranica.slice(0, stranica.length - 4);
             document.getElementById("glavni").className = klasa;
-            if (stranica == "kontakt.htm") {
+            if (klasa == "kontakt") {
                 // document.getElementById("mail").addEventListener("blur", validirajMail);
                 // document.getElementById("poruka").addEventListener("blur", validirajPoruku);
                 document.getElementById("tel").addEventListener("blur", validirajTelefon);

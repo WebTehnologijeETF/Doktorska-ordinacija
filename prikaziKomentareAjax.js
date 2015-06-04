@@ -8,7 +8,12 @@ function prikaziKomentare(id) {
             if (document.getElementById(komentariID).innerHTML == "") {
                 var i;
                 for (i = 0; i < komentari.length; i++) {
-                    document.getElementById(komentariID).innerHTML += "<small>" + komentari[i].autor + ", " +
+                    if(komentari[i].mail == "")
+                        document.getElementById(komentariID).innerHTML += "<small>" + komentari[i].autor + ", " +
+                            komentari[i].vrijeme + "</small><br>" + komentari[i].tekst + "<br><br>";
+                    else
+                        document.getElementById(komentariID).innerHTML += "<small>" + "<a href=\"mailto:" + komentari[i].mail 
+                            + "\" target=\"_blank\">" + komentari[i].autor + "</a>, " +
                             komentari[i].vrijeme + "</small><br>" + komentari[i].tekst + "<br><br>";
                 }
                 document.getElementById("form" + id.toString()).style.display = "block";
