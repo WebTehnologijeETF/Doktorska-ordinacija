@@ -39,6 +39,6 @@
         </div>
         <script type="text/javascript" src="js/stablo.js"></script>
         <script type="text/javascript" src="js/ajax.js"></script>
-        <script type="text/javascript" src="js/prikaziKomentareAjax.js"></script>
+        <script type="text/javascript" src="js/komentari.js"></script>
     </BODY>
 </HTML>

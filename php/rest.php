@@ -6,19 +6,35 @@ function zag() {
     header('Access-Control-Allow-Origin: *');
 }
 
-function rest_get($request, $data) {
-    
+function rest_get($request, $data) { //preuzimanje svih komentara na vijest
+    $veza = new PDO('mysql:host=127.5.233.2;dbname=ordinacijaosmijeh;charset=utf8', 'doktor', 'doktorpass');
+    $veza->exec("set names utf8");
+
+    $upit = $veza->prepare("SELECT * FROM komentar WHERE vijest=?");
+    $upit->bindValue(1, $data['vijest'], PDO::PARAM_INT);
+    $upit->execute();
+
+    print "{ \"komentari\": " . json_encode($upit->fetchAll()) . "}";
 }
 
-function rest_post($request, $data) {
-    
+function rest_post($request, $data) { //dodavanje novog komentara
+    $veza = new PDO("mysql:dbname=ordinacijaosmijeh;host=127.5.233.2;charset=utf8", "doktor", "doktorpass");
+    $veza->exec("set names utf8");
+    $rezultat = $veza->query("INSERT INTO komentar SET vijest='" . $data['vijest'] . "',
+    tekst='" . $data['komentar'] . "', mail='" . $data['mail'] . "', autor='" . $data['autor'] . "'");
+
+    if (!$rezultat) {
+        $greska = $veza->errorInfo();
+        print "SQL greška: " . $greska[2];
+        exit();
+    }
 }
 
 function rest_delete($request) {
     
 }
 
-function rest_put($request, $data) {
+function rest_put($request, $data) { //ažuriranje postojećeg objekta
     
 }
 
