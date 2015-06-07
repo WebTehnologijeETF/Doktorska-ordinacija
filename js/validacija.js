@@ -1,6 +1,6 @@
 function validirajMail() {
     var mail = document.getElementById("mail"),
-        greska_mail = document.getElementById("greska_mail"), regex = /.+\@.+\..+/;
+            greska_mail = document.getElementById("greska_mail"), regex = /.+\@.+\..+/;
 
     if (!regex.test(mail.value)) {
         greska_mail.style.visibility = "visible";

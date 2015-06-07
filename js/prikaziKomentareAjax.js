@@ -8,24 +8,24 @@ function prikaziKomentare(id) {
             if (document.getElementById(komentariID).innerHTML == "") {
                 var i;
                 for (i = 0; i < komentari.length; i++) {
-                    if(komentari[i].mail == "")
+                    if (komentari[i].mail == "")
                         document.getElementById(komentariID).innerHTML += "<small>" + komentari[i].autor + ", " +
-                            komentari[i].vrijeme + "</small><br>" + komentari[i].tekst + "<br><br>";
+                                komentari[i].vrijeme + "</small><br>" + komentari[i].tekst + "<br><br>";
                     else
-                        document.getElementById(komentariID).innerHTML += "<small>" + "<a href=\"mailto:" + komentari[i].mail 
-                            + "\" target=\"_blank\">" + komentari[i].autor + "</a>, " +
-                            komentari[i].vrijeme + "</small><br>" + komentari[i].tekst + "<br><br>";
+                        document.getElementById(komentariID).innerHTML += "<small>" + "<a href=\"mailto:" + komentari[i].mail
+                                + "\" target=\"_blank\">" + komentari[i].autor + "</a>, " +
+                                komentari[i].vrijeme + "</small><br>" + komentari[i].tekst + "<br><br>";
                 }
                 document.getElementById("form" + id.toString()).style.display = "block";
             }
             else {
                 document.getElementById(komentariID).innerHTML = "";
                 document.getElementById("form" + id.toString()).style.display = "none";
-            }                
+            }
         }
         if (ajax.readyState == 4 && ajax.status == 404)
             document.getElementById(komentariID).innerHTML = "Greška!";
     }
-    ajax.open("GET", "komentari.php?vijest=" + id, true);
+    ajax.open("GET", "php/komentari.php?vijest=" + id, true);
     ajax.send();
 }
