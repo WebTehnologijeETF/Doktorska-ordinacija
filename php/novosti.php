@@ -40,7 +40,7 @@ foreach ($rezultat as $vijest) {
         Vaš mail:<br>
         <input type="text" name="mail" id="mail"><br>
         <textarea rows="10" cols="30" name="komentar" id="komentar" required></textarea>*<br>
-        <input type="button" onclick="posaljiKomentar()" id="buttonPosalji' . $vijest['id'] . '" name="buttonPosalji' . $vijest['id'] . '" value="Pošalji komentar">
+        <input type="button" id="buttonPosalji' . $vijest['id'] . '" name="buttonPosalji' . $vijest['id'] . '" value="Pošalji komentar">
         <input type="hidden" name="vijest" id="vijest" value = "' . $vijest['id'] . '">
         </form>';
     print '</div>';

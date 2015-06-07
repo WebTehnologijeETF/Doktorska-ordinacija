@@ -1,5 +1,5 @@
 function prikaziKomentare(id) {
-//    document.getElementById("buttonPosalji" + id.toString()).addEventListener("click", posaljiKomentar);
+    document.getElementById("buttonPosalji" + id.toString()).addEventListener("click", posaljiKomentar);
     var ajax = new XMLHttpRequest();
     var komentariID = "v" + id.toString();
     ajax.onreadystatechange = function () {
@@ -30,7 +30,6 @@ function prikaziKomentare(id) {
     }
     ajax.open("GET", "php/rest.php?vijest=" + id, true);
     ajax.send();
-    document.getElementById("buttonPosalji" + id.toString()).removeEventListener("click", posaljiKomentar);
 }
 
 function posaljiKomentar() {
