@@ -30,12 +30,29 @@ function rest_post($request, $data) { //dodavanje novog komentara
     }
 }
 
-function rest_delete($request) {
-    
+function rest_delete($request) { //brisanje komentara
+    $veza = new PDO("mysql:dbname=ordinacijaosmijeh;host=127.5.233.2;charset=utf8", "doktor", "doktorpass");
+    $veza->exec("set names utf8");
+    $komentarId = explode('=', $request, 2);
+    $rezultat = $veza->query("delete from komentar where id=" . $komentarId);
+
+    if (!$rezultat) {
+        $greska = $veza->errorInfo();
+        print "SQL greška: " . $greska[2];
+        exit();
+    }
 }
 
-function rest_put($request, $data) { //ažuriranje postojećeg objekta
-    
+function rest_put($request, $data) { //editovanje komentara
+    $veza = new PDO("mysql:dbname=ordinacijaosmijeh;host=127.5.233.2;charset=utf8", "doktor", "doktorpass");
+    $veza->exec("set names utf8");
+    $rezultat = $veza->query("update komentar set tekst=" . $data['tekst'] . " where id=" . $data['id']);
+
+    if (!$rezultat) {
+        $greska = $veza->errorInfo();
+        print "SQL greška: " . $greska[2];
+        exit();
+    }    
 }
 
 function rest_error($request) {
