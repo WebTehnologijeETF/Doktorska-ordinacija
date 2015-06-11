@@ -80,16 +80,16 @@ switch ($method) {
         break;
     case 'POST':
         zag();
-        $vijest = filter_input(INPUT_POST, trim($_POST['vijest']), FILTER_SANITIZE_NUMBER_INT);
-        $komentar = filter_input(INPUT_POST, trim($_POST['komentar']), FILTER_SANITIZE_SPECIAL_CHARS);
-        $mail = filter_input(INPUT_POST, trim($_POST['mail']), FILTER_SANITIZE_EMAIL);
-        $autor = filter_input(INPUT_POST, trim($_POST['autor']), FILTER_SANITIZE_SPECIAL_CHARS);
+        $vijest = filter_input(INPUT_POST, 'vijest', FILTER_SANITIZE_NUMBER_INT);
+        $komentar = filter_input(INPUT_POST, 'komentar', FILTER_SANITIZE_SPECIAL_CHARS);
+        $mail = filter_input(INPUT_POST, 'mail', FILTER_SANITIZE_EMAIL);
+        $autor = filter_input(INPUT_POST, 'autor', FILTER_SANITIZE_SPECIAL_CHARS);
         $data = array('vijest' => $vijest, 'komentar' => $komentar, 'mail' => $mail, 'autor' => $autor);
         rest_post($request, $data);
         break;
     case 'GET':
         zag();
-        $vijest = filter_input(INPUT_GET, trim($_GET['vijest']), FILTER_SANITIZE_NUMBER_INT);
+        $vijest = filter_input(INPUT_GET, 'vijest', FILTER_SANITIZE_NUMBER_INT);
         $data = array('vijest' => $vijest);
         rest_get($request, $data);
         break;
