@@ -34,7 +34,7 @@
         </div>
 
         <div id="glavni" class="novosti">
-            <?php include("php/novosti.php"); ?>
+            <?php include("log/novosti.php"); ?>
         </div>
         <div class="stablo">
             <ul>
