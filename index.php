@@ -13,7 +13,7 @@
 
         <div class="meni">
             <ul>
-                <li onclick="otvori_stranicu('php/novosti.php')"><a>Naslovnica</a></li>
+                <li onclick="otvori_stranicu('log/novosti.php')"><a>Naslovnica</a></li>
                 <li onclick="otvori_stranicu('htm/o_nama.htm')"><a>O nama</a></li>
                 <li onclick="otvori_stranicu('htm/info.htm')"><a>Informacije</a></li>
                 <li onclick="otvori_stranicu('htm/kontakt.htm')"><a>Kontakt</a></li>
