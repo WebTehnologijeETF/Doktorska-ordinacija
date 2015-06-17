@@ -28,7 +28,7 @@ function prikaziKomentare(id) {
         if (ajax.readyState == 4 && ajax.status == 404)
             document.getElementById(komentariID).innerHTML = "Greška!";
     }
-    ajax.open("GET", "php/rest.php?vijest=" + id, true);
+    ajax.open("GET", "log/rest.php?vijest=" + id, true);
     ajax.send();
 }
 
