@@ -3,10 +3,7 @@ function otvori_stranicu(stranica) {
     ajax.onreadystatechange = function () {
         if (ajax.readyState == 4 && ajax.status == 200) {
             document.getElementById("glavni").innerHTML = ajax.responseText;
-            if(stranica == "php/novosti.php")
-                klasa = "novosti";
-            else
-                klasa = stranica.slice(0, stranica.length - 4);
+                klasa = stranica.slice(4, stranica.length - 4);
             document.getElementById("glavni").className = klasa;
             if (klasa == "kontakt") {
                 // document.getElementById("mail").addEventListener("blur", validirajMail);

@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <TITLE>Privatna ordinacija "Osmijeh"</TITLE>
         <link rel="shortcut icon" href="slike/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="stil.css">
+        <link rel="stylesheet" type="text/css" href="htm/stil.css">
     </HEAD>
     <BODY>
 
@@ -14,14 +14,19 @@
         <div class="meni">
             <ul>
                 <li onclick="otvori_stranicu('php/novosti.php')"><a>Naslovnica</a></li>
-                <li onclick="otvori_stranicu('o_nama.htm')"><a>O nama</a></li>
-                <li onclick="otvori_stranicu('info.htm')"><a>Informacije</a></li>
-                <li onclick="otvori_stranicu('kontakt.htm')"><a>Kontakt</a></li>
-                <li onclick="otvori_stranicu('proizvodi.htm')"><a>Proizvodi</a></li>
+                <li onclick="otvori_stranicu('htm/o_nama.htm')"><a>O nama</a></li>
+                <li onclick="otvori_stranicu('htm/info.htm')"><a>Informacije</a></li>
+                <li onclick="otvori_stranicu('htm/kontakt.htm')"><a>Kontakt</a></li>
+                <li onclick="otvori_stranicu('htm/proizvodi.htm')"><a>Proizvodi</a></li>
             </ul>
         </div>
 
         <div class="linkovi">
+            <FORM action="">
+                <INPUT type="text" name="username" id="username">
+                <INPUT type="text" name="password" id="password">
+                <INPUT type="submit" name="login" id="login" value="Login">
+            </FORM>
             <ul>
                 <li><a href="http://www.fda.gov/" target="_blank">Food and Drug Agency</a></li>
                 <li><a href="http://www.fmoh.gov.ba/" target="_blank">Federalno ministarstvo zdravstva</a></li>
